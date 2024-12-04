@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Update Room</h1>
+    <form (submit)="updateRoom()">
+      <div class="form-group">
+        <label for="room_id">Room ID</label>
+        <input type="text" id="room_id" class="form-control" [(ngModel)]="room.room_id" name="room_id" disabled />
+      </div>
+      <div class="form-group">
+        <label for="room_name">Room Name</label>
+        <input type="text" id="room_name" class="form-control" [(ngModel)]="room.room_name" name="room_name" required />
+      </div>
+      <div class="form-group">
+        <label for="capacity">Capacity</label>
+        <input type="number" id="capacity" class="form-control" [(ngModel)]="room.capacity" name="capacity" required />
+      </div>
+      <div class="form-group">
+        <label for="building">Building</label>
+        <input type="text" id="building" class="form-control" [(ngModel)]="room.building" name="building" required />
+      </div>
+      <div class="form-group">
+        <label for="floor">Floor</label>
+        <input type="number" id="floor" class="form-control" [(ngModel)]="room.floor" name="floor" required />
+      </div>
+      <button class="btn btn-success" type="submit">Update Room</button>
+    </form>
+  </div>
+  

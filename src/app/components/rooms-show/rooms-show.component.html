@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Rooms</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Room ID</th>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Building</th>
+        <th>Floor</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(room of rooms; track room){
+
+      <tr>
+        <td>{{ room.room_id }}</td>
+        <td>{{ room.room_name }}</td>
+        <td>{{ room.capacity }}</td>
+        <td>{{ room.building }}</td>
+        <td>{{ room.floor }}</td>
+        <td>
+          <button class="btn btn-warning" (click)="updateRoom(room.id)">
+            Update
+          </button>
+          <button class="btn btn-danger" (click)="deleteRoom(room.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <a href="/rooms-create">
+    <button class="btn btn-primary">Add Room</button>
+  </a>
+</div>
