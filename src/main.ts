@@ -1,12 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideHttpClient } from '@angular/common/http';  // <-- Import provideHttpClient
+import { provideHttpClient } from '@angular/common/http'; 
 import { provideRouter } from '@angular/router';
-import { routes } from './app/app.routes';
-import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes'; 
+import { AppComponent } from './app/app.component'; 
+import { provideAnimations, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    provideHttpClient(),  // <-- Add provideHttpClient() here
-  ]
+    provideHttpClient(),
+    provideAnimations(), 
+    NoopAnimationsModule, 
+  ],
 }).catch((err) => console.error(err));

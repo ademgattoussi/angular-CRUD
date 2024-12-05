@@ -1,1 +1,43 @@
-<p>classes-show works!</p>
+<div class="container1">
+    <h1>Classes</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Class ID</th>
+          <th>Subject ID</th>
+          <th>Class Name</th>
+          <th>Students</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(classItem of classes; track classItem) {
+        <tr>
+          <td>{{ classItem.class_id }}</td>
+          <td>{{ classItem.subject_id }}</td>
+          <td>{{ classItem.class_name }}</td>
+          <td>
+            <ul>
+              @for(student of classItem.students; track student) {
+              <li>{{ student }}</li>
+              }
+            </ul>
+          </td>
+          <td>
+            <button class="btn btn-warning" (click)="updateClass(classItem.id)">
+              Update
+            </button>
+            <button class="btn btn-danger" (click)="deleteClass(classItem.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+    <br>
+    <a href="/classes-create">
+      <button class="btn btn-primary">Add Class</button>
+    </a>
+  </div>
+  

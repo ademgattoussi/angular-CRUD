@@ -1,0 +1,140 @@
+
+.container1 {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; 
+  }
+  
+  
+  .container1 .btn-primary {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container1 .btn-primary:hover {
+    background-color: #155cb0;
+  }
+  
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table thead {
+    background: #1976d2;
+    color: white;
+  }
+  
+  .table thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table tbody td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  
+  
+  .table tbody td button {
+    margin-left: 8px;
+  }
+  
+  
+  .btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  
+  .btn-warning {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e58900;
+  }
+  
+  
+  .btn-danger {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .table thead {
+      display: none;
+    }
+  
+    .table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+    }
+  
+    .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+    }
+  
+    .table tbody td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+      color: #555;
+    }
+  
+    .btn {
+      padding: 8px 12px;
+      font-size: 14px;
+      display: inline-block; 
+      margin-bottom: 0;
+    }
+  
+    .container1 .btn-primary {
+      position: static;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
+  

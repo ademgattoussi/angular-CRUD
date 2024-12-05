@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';  // <-- Import HttpClient
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -70,12 +70,16 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/classes`);
   }
 
-  addClass(clazz: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/classes`, clazz);
+  getClassById(classId: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/classes/${classId}`);
   }
 
-  updateClassById(classId: string, clazz: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/classes/${classId}`, clazz);
+  addClass(classe: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/classes`, classe);
+  }
+
+  updateClassById(classId: string, classe: any): Observable<any> {
+    return this.http.put(`${this.baseUrl}/classes/${classId}`, classe);
   }
 
   deleteClassById(classId: string): Observable<any> {
