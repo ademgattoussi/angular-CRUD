@@ -1,1 +1,38 @@
-<p>students-show works!</p>
+<div class="container1">
+    <h1>Students</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(student of students; track student){
+
+            <tr>
+                <td>{{ student.student_id }}</td>
+                <td>{{ student.first_name }}</td>
+                <td>{{ student.last_name }}</td>
+                <td>{{ student.email }}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateStudent(student.id)">
+                        Update
+                    </button>
+                    <button class="btn btn-danger" (click)="deleteStudent(student.id)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        }
+      </tbody>
+    </table>
+    <br />
+    <a href="/students-create">
+      <button class="btn btn-primary">Add Student</button>
+    </a>
+  </div>
+  

@@ -1,1 +1,95 @@
-<p>sessions-update works!</p>
+<div class="container">
+    <h1>Update Session</h1>
+    <form (submit)="updateSession()">
+      <div class="form-group">
+        <label for="session_id">Session ID</label>
+        <input
+          type="text"
+          id="session_id"
+          class="form-control"
+          [(ngModel)]="session.session_id"
+          name="session_id"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label for="subject_id">Subject ID</label>
+        <input
+          type="text"
+          id="subject_id"
+          class="form-control"
+          [(ngModel)]="session.subject_id"
+          name="subject_id"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="teacher_id">Teacher ID</label>
+        <input
+          type="text"
+          id="teacher_id"
+          class="form-control"
+          [(ngModel)]="session.teacher_id"
+          name="teacher_id"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="room_id">Room ID</label>
+        <input
+          type="text"
+          id="room_id"
+          class="form-control"
+          [(ngModel)]="session.room_id"
+          name="room_id"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="class_id">Class ID</label>
+        <input
+          type="text"
+          id="class_id"
+          class="form-control"
+          [(ngModel)]="session.class_id"
+          name="class_id"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="session_date">Session Date</label>
+        <input
+          type="date"
+          id="session_date"
+          class="form-control"
+          [(ngModel)]="session.session_date"
+          name="session_date"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="start_time">Start Time</label>
+        <input
+          type="time"
+          id="start_time"
+          class="form-control"
+          [(ngModel)]="session.start_time"
+          name="start_time"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="end_time">End Time</label>
+        <input
+          type="time"
+          id="end_time"
+          class="form-control"
+          [(ngModel)]="session.end_time"
+          name="end_time"
+          required
+        />
+      </div>
+      <button class="btn btn-success" type="submit">Update Session</button>
+    </form>
+  </div>
+  

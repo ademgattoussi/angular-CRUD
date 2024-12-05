@@ -36,6 +36,10 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/teachers`);
   }
 
+  getTeacherById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/teachers/${id}`);
+  }
+
   addTeacher(teacher: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/teachers`, teacher);
   }
@@ -51,6 +55,10 @@ export class ApiService {
   // Subjects
   getSubjects(): Observable<any> {
     return this.http.get(`${this.baseUrl}/subjects`);
+  }
+
+  getSubjectById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/subjects/${id}`);
   }
 
   addSubject(subject: any): Observable<any> {
@@ -91,6 +99,10 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/sessions`);
   }
 
+  getSessionById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/sessions/${id}`);
+  }
+
   addSession(session: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/sessions`, session);
   }
@@ -106,6 +118,10 @@ export class ApiService {
   // Students
   getStudents(): Observable<any> {
     return this.http.get(`${this.baseUrl}/students`);
+  }
+
+  getStudentById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/students/${id}`);
   }
 
   addStudent(student: any): Observable<any> {

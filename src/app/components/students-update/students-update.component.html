@@ -1,1 +1,51 @@
-<p>students-update works!</p>
+<div class="container">
+    <h1>Update Student</h1>
+    <form (submit)="updateStudent()">
+      <div class="form-group">
+        <label for="student_id">Student ID</label>
+        <input
+          type="text"
+          id="student_id"
+          class="form-control"
+          [(ngModel)]="student.student_id"
+          name="student_id"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input
+          type="text"
+          id="first_name"
+          class="form-control"
+          [(ngModel)]="student.first_name"
+          name="first_name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input
+          type="text"
+          id="last_name"
+          class="form-control"
+          [(ngModel)]="student.last_name"
+          name="last_name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="student.email"
+          name="email"
+          required
+        />
+      </div>
+      <button class="btn btn-success" type="submit">Update Student</button>
+    </form>
+  </div>
+  

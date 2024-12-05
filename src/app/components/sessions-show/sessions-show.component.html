@@ -1,1 +1,46 @@
-<p>sessions-show works!</p>
+<div class="container1">
+    <h1>Sessions</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Session ID</th>
+          <th>Subject ID</th>
+          <th>Teacher ID</th>
+          <th>Room ID</th>
+          <th>Class ID</th>
+          <th>Session Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(session of sessions; track session){
+
+            <tr>
+                <td>{{ session.session_id }}</td>
+                <td>{{ session.subject_id }}</td>
+                <td>{{ session.teacher_id }}</td>
+                <td>{{ session.room_id }}</td>
+                <td>{{ session.class_id }}</td>
+                <td>{{ session.session_date }}</td>
+                <td>{{ session.start_time }}</td>
+                <td>{{ session.end_time }}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateSession(session.id)">
+                        Update
+                    </button>
+                    <button class="btn btn-danger" (click)="deleteSession(session.id)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        }
+      </tbody>
+    </table>
+    <br />
+    <a href="/sessions-create">
+      <button class="btn btn-primary">Add Session</button>
+    </a>
+  </div>
+  
